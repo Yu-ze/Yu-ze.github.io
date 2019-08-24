@@ -755,7 +755,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-24 22:43:51" itemprop="dateModified" datetime="2019-08-24T22:43:51+08:00">2019-08-24</time>
+                <time title="修改时间：2019-08-24 23:27:03" itemprop="dateModified" datetime="2019-08-24T23:27:03+08:00">2019-08-24</time>
               </span>
             
           
@@ -795,44 +795,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
-            <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>暑假这几天闲着没事做，打算自己建个博客试试。我在知乎、简书、博客园这些比较出名的网站也试过写东西了，但是去没有坚持下来而已。我只是喜欢建博客的过程而已，这会让我有点成就感。而且熟悉的话也不算太难。</p>
+          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>暑假这几天闲着没事做，打算自己建个博客试试。我在知乎、简书、博客园这些比较出名的网站也试过写东西了，但是去没有坚持下来而已。我只是喜欢建博客的过程而已，这会让我有点成就感。而且熟悉的话也不算太难。</p>
 <p>刚开始是打算用worldpress建站的，因为这个网上教程比较多。以前也有过类似经历，后来就放弃了，因为从长久来看，我就快要毕业了，没有学生优惠的话，一个月的月租还是负担重了点。建站的话首选阿里云的轻量级服务器，这个里面都部署好了各种建站的配置。而且学生认证后的话只要9.5元一个月，还算比较便宜的，在阿里云官网搜索云翼计划就可以找到相关优惠了。当然，腾讯云也有学生优惠，但我这里用的是github page + Hexo做的博客，那接下来就聊聊这过程吧。</p>
 <p>刚开始是要要安装git在电脑上的，我的是windows操作系统。以前尝试过用github page做，但是中间出现了好多错误，就没成功，没想到这次可以部署了。之后要安装Node.js，这个之前我电脑也装过了。所以这次就不用装了，我只在B站上搜的教程，之后再配合官方hexo文档做的。官方文档比较详细，但是自己看视频跟着步骤走更容易一点，也就是结果复现。</p>
-<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><ol>
-<li><p>等所有的上面两个程序安装完成后就可以用nmp安装Hexo.在任意位置点击鼠标右键，然后打开Git Bash进入git命令操作台，然后输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在D盘或其他盘创建一个博客根目录，名字随意。例如我的就是blog</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装完成之后根目录的内容如下<br><img src="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/blog%E6%88%AA%E5%9B%BE.png" alt="图片"></p>
-</li>
-<li><p>在Git Bash执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在浏览器上输入<a href="http://localhost:4000就可以看到你的站点了，刚开始使用的是hexo的默认主题landscape" target="_blank" rel="noopener">http://localhost:4000就可以看到你的站点了，刚开始使用的是hexo的默认主题landscape</a></p>
-</li>
-</ol>
-<h4 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h4><blockquote>
-<p>使用github托管hexo</p>
-<ol>
-<li>登录到github，新建一个仓库(New repository)</li>
-<li>只需要填写Repository name即可，名字格式为你的github用户名.github.io<br><img src="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/github%E4%BB%93%E5%BA%93.png" alt="仓库"></li>
-</ol>
-</blockquote>
-<h4 id="Hexo部署到github上"><a href="#Hexo部署到github上" class="headerlink" title="Hexo部署到github上"></a>Hexo部署到github上</h4><ol>
-<li><p>修改站点配置文件，在hexo有两份主要的配置文件，一份是站点配置，另一份是主题配置,名称都是_config.yml。我这用的是VS code修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">      github: git@github.com:chentging/yourname.github.io.git,master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将hexo部署到github上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>执行完毕后再访问测试一下就可以了，访问测试：<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a></p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/15/hexo部署/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
