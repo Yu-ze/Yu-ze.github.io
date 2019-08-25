@@ -56,17 +56,17 @@
   };
 </script>
 
-  <meta name="description" content="var APP_ID = R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = Ma2gYYreIq8Emct0UqiNH3r6;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
+  <meta name="description" content="AV.initialize(&quot;R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz&quot;, &quot;Ma2gYYreIq8Emct0UqiNH3r6&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;http://yulog.me&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id">
 <meta property="og:type" content="website">
-<meta property="og:title" content="热门文章Top 10">
+<meta property="og:title" content="文章热度排行">
 <meta property="og:url" content="http://yoursite.com/top/index.html">
 <meta property="og:site_name" content="Zeyu&#39;s BLOG">
-<meta property="og:description" content="var APP_ID = R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = Ma2gYYreIq8Emct0UqiNH3r6;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
+<meta property="og:description" content="AV.initialize(&quot;R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz&quot;, &quot;Ma2gYYreIq8Emct0UqiNH3r6&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;http://yulog.me&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-24T05:42:57.040Z">
+<meta property="og:updated_time" content="2019-08-25T03:22:12.224Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="热门文章Top 10">
-<meta name="twitter:description" content="var APP_ID = R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz;  //输入个人LeanCloud账号AppID   var APP_KEY = Ma2gYYreIq8Emct0UqiNH3r6;  //输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   })">
+<meta name="twitter:title" content="文章热度排行">
+<meta name="twitter:description" content="AV.initialize(&quot;R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz&quot;, &quot;Ma2gYYreIq8Emct0UqiNH3r6&quot;);    var time=0   var title=&quot;&quot;   var url=&quot;http://yulog.me&quot;   var query = new AV.Query(&apos;Counter&apos;);   query.notEqualTo(&apos;id">
   <link rel="canonical" href="http://yoursite.com/top/">
 
 
@@ -81,7 +81,7 @@
   };
 </script>
 
-  <title>热门文章Top 10 | Zeyu's BLOG</title>
+  <title>文章热度排行 | Zeyu's BLOG</title>
   
 
 
@@ -307,7 +307,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">热门文章Top 10
+<h1 class="post-title" itemprop="name headline">文章热度排行
 
 </h1>
 
@@ -323,41 +323,30 @@
       
       <div class="post-body">
         
-          <div id="post-rank"></div>
-
-<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
-<script>
-  var APP_ID = R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz;  //输入个人LeanCloud账号AppID
-  var APP_KEY = Ma2gYYreIq8Emct0UqiNH3r6;  //输入个人LeanCloud账号AppKey
-  AV.init({
-    appId: APP_ID,
-    appKey: APP_KEY
-  });
-
-  var query = new AV.Query('Counter');//表名
-  query.descending('time'); //结果按阅读次数降序排序
-  query.limit(10);  //最终只返回10条结果
-  query.find().then( response => {
-    var content = response.reduce( (accum, {attributes}) => {
-      accum += `<p><div class="prefix">热度 ${attributes.time} ℃</div><div><a href="${attributes.url}">${attributes.title}</a></div></p>`
-      return accum;
-    },"")
-    document.querySelector("#post-rank").innerHTML = content;
-  })
-  .catch( error => {
-    console.log(error);
+          <div id="hot"></div>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script>AV.initialize("R3iFQrFghTcUAQlM0sYL8M03-gzGzoHsz", "Ma2gYYreIq8Emct0UqiNH3r6");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url="http://yulog.me"
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(1000);
+  query.find().then(function (todo) {
+    for (var i=0;i<1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<p>"+"<font color='#1C1C1C'>"+"【文章热度:"+time+"℃】"+"</font>"+"<a href='"+"YOUR_URL"+url+"'>"+title+"</a>"+"</p>";
+      document.getElementById("hot").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
   });
 </script>
-
-
-<style type="text/css">
-  #post-rank {
-    text-align: center;
-  }
-  #post-rank .prefix {
-    color: #ff4d4f;
-  }
-</style>
         
       </div>
       
@@ -628,24 +617,16 @@
         .then(({ results }) => {
           if (results.length > 0) {
             var counter = results[0];
+              leancloudSelector(url).innerText = counter.time + 1;
+            
             Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
               .then(response => response.json())
-              .then(() => {
-                leancloudSelector(url).innerText = counter.time + 1;
-              })
-            
               .catch(error => {
                 console.log('Failed to save visitor count', error);
               })
           } else {
-              Counter('post', '/classes/Counter', { title: title, url: url, time: 1 })
-                .then(response => response.json())
-                .then(() => {
-                  leancloudSelector(url).innerText = 1;
-                })
-                .catch(error => {
-                  console.log('Failed to create', error);
-                });
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
             
           }
         })
