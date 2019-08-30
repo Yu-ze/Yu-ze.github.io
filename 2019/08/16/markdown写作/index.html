@@ -65,8 +65,8 @@
 <meta property="og:description" content="前言好像每个hexo博客都会有一篇介绍markdown写作技巧，那我也mark一下吧。markdown纯文本相对于传统的富文本来说，只需要在写作时依照规则键入特定的标记，便可实现非常多样的排版效果。无需考虑字体行距等排版元素的干扰，我们可以将更多的精力集中于写作本身，况且markdown排版出来的效果十分简洁易读，在这里我也总结一下，方便自己查阅。 这里说明一下，我使用的是VS code和印象笔">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg">
-<meta property="og:image" content="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg@w=300">
-<meta property="og:updated_time" content="2019-08-30T12:33:30.829Z">
+<meta property="og:image" content="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/IMG_2688.PNG">
+<meta property="og:updated_time" content="2019-08-30T13:03:24.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown写作">
 <meta name="twitter:description" content="前言好像每个hexo博客都会有一篇介绍markdown写作技巧，那我也mark一下吧。markdown纯文本相对于传统的富文本来说，只需要在写作时依照规则键入特定的标记，便可实现非常多样的排版效果。无需考虑字体行距等排版元素的干扰，我们可以将更多的精力集中于写作本身，况且markdown排版出来的效果十分简洁易读，在这里我也总结一下，方便自己查阅。 这里说明一下，我使用的是VS code和印象笔">
@@ -353,7 +353,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-30 20:33:30" itemprop="dateModified" datetime="2019-08-30T20:33:30+08:00">2019-08-30</time>
+                <time title="修改时间：2019-08-30 21:03:24" itemprop="dateModified" datetime="2019-08-30T21:03:24+08:00">2019-08-30</time>
               </span>
             
           
@@ -388,7 +388,7 @@
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span>940</span>
+              <span>1.4k</span>
             </span>
           
 
@@ -427,7 +427,7 @@
 <li><u>我是下滑线<u></u></u></li>
 </ul>
 <h5 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h5><ul>
-<li>~<del>我是删除线</del></li>
+<li>~~我是删除线~~</li>
 <li><del>我是删除线</del></li>
 </ul>
 <h5 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h5><ul>
@@ -446,8 +446,8 @@
 <li><a href="http://yulog.me/2019/08/16/markdown%E5%86%99%E4%BD%9C/" target="_blank" rel="noopener">超链接</a></li>
 </ul>
 <h5 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h5><ul>
-<li>!<a href="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg" target="_blank" rel="noopener">图片</a></li>
-<li><img src="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg@w=300" alt="图片"></li>
+<li>![图片](<a href="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg" target="_blank" rel="noopener">https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/markdown.jpg</a>)</li>
+<li><img src="https://blog-1258579174.cos.ap-chengdu.myqcloud.com/images/IMG_2688.PNG" alt="图片"></li>
 </ul>
 <h5 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h5><ul>
 <li><p>无序列表：可以使用*作为标记，也可以使用+或者-作为标记</p>
@@ -473,8 +473,10 @@
 <li><code>文字标亮</code></li>
 </ul>
 <h5 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h5><ul>
-<li>用```代码块<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```python</span><br><span class="line">number = 56</span><br><span class="line">guess = int(input(&apos;输入一个整数：&apos;))</span><br><span class="line">if guess == number:</span><br><span class="line">    print(&apos;恭喜你，答对了&apos;)</span><br><span class="line">elif guess &lt; number:</span><br><span class="line">    print(&apos;不对哦，这个数比你猜的数更大&apos;)</span><br><span class="line">else:</span><br><span class="line">    print(&apos;不对哦，这个数比你猜的数更小&apos;)</span><br><span class="line"></span><br><span class="line">print(&apos;完毕&apos;)</span><br></pre></td></tr></table></figure></li>
+<li>用```代码块```包围代码</li>
 </ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">number = <span class="number">56</span></span><br><span class="line">guess = int(input(<span class="string">'输入一个整数：'</span>))</span><br><span class="line"><span class="keyword">if</span> guess == number:</span><br><span class="line">    print(<span class="string">'恭喜你，答对了'</span>)</span><br><span class="line"><span class="keyword">elif</span> guess &lt; number:</span><br><span class="line">    print(<span class="string">'不对哦，这个数比你猜的数更大'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'不对哦，这个数比你猜的数更小'</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'完毕'</span>)</span><br></pre></td></tr></table></figure>
+
 <h5 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h5><p>单元格和表头：<br>    表头 | 表头<br>    ---- | —-<br>    内容1 | 内容2<br>    内容3 | 内容4</p>
 <pre><code>表头 | 表头 
 ---- | ----
@@ -483,9 +485,26 @@
 <ul>
 <li>:— 代表左对齐</li>
 <li>:–: 代表居中对齐</li>
-<li>—: 代表右对齐</li>
+<li>-–: 代表右对齐</li>
+<li>-—：默认左对齐</li>
 </ul>
-<h4 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h4><h4 id="其他平台特有语法"><a href="#其他平台特有语法" class="headerlink" title="其他平台特有语法"></a>其他平台特有语法</h4><h4 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h4>
+<h5 id="任务清单"><a href="#任务清单" class="headerlink" title="任务清单"></a>任务清单</h5><p>通过[x] 和[ ]来生成任务清单</p>
+<ul>
+<li><input checked disabled type="checkbox"> 马铃薯</li>
+<li><input disabled type="checkbox"> 番茄</li>
+<li><input disabled type="checkbox"> 圣女果</li>
+</ul>
+<h4 id="高级语法"><a href="#高级语法" class="headerlink" title="高级语法"></a>高级语法</h4><h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h5><p>设置之后可以自动根据设置的分级标题来自动生成目录<br>通过[TOC]标记来自动生成目录</p>
+<h5 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h5><p>```math<br>e^{i\pi} + 1 = 0<br>```</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e^&#123;i\pi&#125; + 1 = 0</span><br></pre></td></tr></table></figure>
+
+<h5 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A[模块A] --&gt;|A1| B(模块B)</span><br><span class="line">B --&gt; C&#123;判断条件C&#125;</span><br><span class="line">C --&gt;|条件C1| D[模块D]</span><br><span class="line">C --&gt;|条件C2| E[模块E]</span><br><span class="line">C --&gt;|条件C3| F[模块F]</span><br></pre></td></tr></table></figure>
+
+<h5 id="时序表"><a href="#时序表" class="headerlink" title="时序表"></a>时序表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">A-&gt;&gt;B: 是否已收到消息？</span><br><span class="line">B--&gt;&gt;A: 已收到消息</span><br></pre></td></tr></table></figure>
+
+<h5 id="甘特图"><a href="#甘特图" class="headerlink" title="甘特图"></a>甘特图</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">title 甘特图</span><br><span class="line">dateFormat YYYY-MM-DD</span><br><span class="line">section 项目A</span><br><span class="line">任务1 :a1, 2018-06-06, 30d</span><br><span class="line">任务2 :after a1 , 20d</span><br><span class="line">section 项目B</span><br><span class="line">任务3 :2018-06-12 , 12d</span><br><span class="line">任务4 : 24d</span><br></pre></td></tr></table></figure>
+
+<h4 id="其他平台特有语法"><a href="#其他平台特有语法" class="headerlink" title="其他平台特有语法"></a>其他平台特有语法</h4><h4 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h4>
     </div>
 
     
@@ -753,7 +772,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法"><span class="nav-number">2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#标题"><span class="nav-number">2.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加粗"><span class="nav-number">2.2.</span> <span class="nav-text">加粗</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜体"><span class="nav-number">2.3.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下划线"><span class="nav-number">2.4.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除线"><span class="nav-number">2.5.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分隔线"><span class="nav-number">2.6.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用"><span class="nav-number">2.7.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#超链接"><span class="nav-number">2.8.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图片链接"><span class="nav-number">2.9.</span> <span class="nav-text">图片链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">2.10.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文字标亮"><span class="nav-number">2.11.</span> <span class="nav-text">文字标亮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码块"><span class="nav-number">2.12.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表格"><span class="nav-number">2.13.</span> <span class="nav-text">表格</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级语法"><span class="nav-number">3.</span> <span class="nav-text">高级语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他平台特有语法"><span class="nav-number">4.</span> <span class="nav-text">其他平台特有语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关链接"><span class="nav-number">5.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本语法"><span class="nav-number">2.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#标题"><span class="nav-number">2.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#加粗"><span class="nav-number">2.2.</span> <span class="nav-text">加粗</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#斜体"><span class="nav-number">2.3.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下划线"><span class="nav-number">2.4.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除线"><span class="nav-number">2.5.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分隔线"><span class="nav-number">2.6.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用"><span class="nav-number">2.7.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#超链接"><span class="nav-number">2.8.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图片链接"><span class="nav-number">2.9.</span> <span class="nav-text">图片链接</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表"><span class="nav-number">2.10.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文字标亮"><span class="nav-number">2.11.</span> <span class="nav-text">文字标亮</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码块"><span class="nav-number">2.12.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#表格"><span class="nav-number">2.13.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#任务清单"><span class="nav-number">2.14.</span> <span class="nav-text">任务清单</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级语法"><span class="nav-number">3.</span> <span class="nav-text">高级语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#目录"><span class="nav-number">3.1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数学公式"><span class="nav-number">3.2.</span> <span class="nav-text">数学公式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#流程图"><span class="nav-number">3.3.</span> <span class="nav-text">流程图</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#时序表"><span class="nav-number">3.4.</span> <span class="nav-text">时序表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#甘特图"><span class="nav-number">3.5.</span> <span class="nav-text">甘特图</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他平台特有语法"><span class="nav-number">4.</span> <span class="nav-text">其他平台特有语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相关链接"><span class="nav-number">5.</span> <span class="nav-text">相关链接</span></a></li></ol></div>
             
 
           </div>
