@@ -147,7 +147,7 @@ template {
   display: none;
 }
 ::selection {
-  background: #87888b;
+  background: #262a30;
   color: #fff;
 }
 body {
@@ -1596,6 +1596,28 @@ pre .javascript .function {
 .page-post-detail .post-type-quote .post-tags {
   display: none;
 }
+.swal-overlay {
+  background-color: transparent;
+}
+.copy-success-message {
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  width: auto;
+  margin: 16x 0px;
+  vertical-align: top;
+}
+.copy-success-message .swal-content {
+  margin: 0px 0px !important;
+  padding: 10px 16px;
+  line-height: 1em;
+}
+.copy-success-message .message-icon {
+  color: #52c41a;
+  margin-right: 8px;
+}
+.copy-success-message .message-content {
+  font-size: 14px;
+}
 .reading-progress-bar {
   background: #37c6c0;
   display: block;
@@ -1699,7 +1721,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d06f21;
+  background: #a863ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1884,7 +1906,7 @@ pre .javascript .function {
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
