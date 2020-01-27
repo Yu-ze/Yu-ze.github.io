@@ -1,6 +1,6 @@
 ---
-title: 视频剪辑
-tags: PR
+title: Linux基础操作
+tags: Linux
 categories: 学习日记
 ---
 
